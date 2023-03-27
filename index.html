@@ -30,30 +30,38 @@
 		opacity: 0.75;
 		color: white;
 	  }
-	  
-	  .content img {
-	  }
       
       .title {
-        font-size: 1.15rem;
+        font-size: 2rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
       }
       
       .description {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
+		margin-bottom: 1rem;
       }
 	  
 	  .screenshots {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-auto-flow: row dense;
 		margin-top: 0.5rem; 
-		grid-gap: 0.25rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		max-width: 80%;
+	  }
+	  
+	  img {
+		max-width: 40%;
+		height: auto;
 	  }
     </style>
   </head>
   <body>
     <div class="content">
-      <p class="title">RODoors</p>
+      <b class="title">RODoors</b>
 	  
       <div class="description">
         RODoors is A project on 
@@ -70,7 +78,7 @@
 		  <img src="./images/placeholder.png" width="640" height="360"/>
 	  </div>
 	  
-	  <div style="font-size: 0.65rem; font-weight: bold; display: flex; justify-content: center">
+	  <div style="font-size: 0.75rem; font-weight: bold; display: flex; justify-content: center">
 		<p style="color: yellow">[WARNING!]</p>
 		&nbsp;
 		<p>Images and gameplay screenshots/videos above are not final and are subject to change.</p>
