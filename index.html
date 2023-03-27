@@ -9,8 +9,32 @@
     <meta content="#292929" data-react-helmet="true" name="theme-color" />
   
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Lilita+One&display=swap');
       
+	  ::-webkit-scrollbar {
+		  width: 10px;
+	  }
+
+	  /* Track */
+	  ::-webkit-scrollbar-track {
+	    background: #1c1c1c;
+	  }
+
+	  /* Handle */
+	  ::-webkit-scrollbar-thumb {
+	    background: #3d3d3d;
+	  }
+
+	  /* Handle on hover */
+	  ::-webkit-scrollbar-thumb:hover {
+	    background: #333333;
+	  }
+	  
+	  body {
+		scrollbar-color: #1c1c1c #3d3d3d;
+		scrollbar-width: thin;
+	  }
+	  
       body {
         margin: 0;
         background-color: #292929;
@@ -18,8 +42,7 @@
         font-family: 'Comfortaa', cursive;
       }
       
-      .content {
-        padding: 1rem; 
+      .content { 
 		text-align: center;
 		display: flex;
 		align-items: center;
@@ -53,14 +76,68 @@
 		max-width: 80%;
 	  }
 	  
+	  .header {
+		position: sticky;
+		top: 0;
+		z-index: 999;
+		background-color: #3d3d3d;
+		width: 100%;
+		height: 4rem;
+		margin-bottom: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	  }
+	  
+	  .nav {
+		margin-right: 1rem;
+		display: flex;
+		justify-content: flex-end;
+		gap: 0.15rem;
+	  }
+	  
+	  .nav a {
+		text-decoration: none;
+		padding: 1rem;
+		background-color: #1f1f1f;
+		color: white;
+		opacity: 1;
+		max-height: 100%;
+	  }
+	  
+	  .nav a:hover {
+		color: gray;
+	  }
+	  
+	  a[disabled], a[disabled]:hover {
+		color: gray;
+		opacity: 0.65;
+		cursor: pointer;
+		pointer-events: none;
+	  }
+	  
 	  img {
 		max-width: 40%;
 		height: auto;
+		border-radius: 5px;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #525252;
+		opacity: 0.95;
 	  }
     </style>
   </head>
   <body>
     <div class="content">
+	  <div class="header">
+		<b style="font-size: 1.5rem; margin-left: 1rem; font-family: 'Lilita One', cursive; color: lightgray;">RODoors</b>
+		<div class="nav">
+			<a href="/"><b>HOME</b></a>
+			<a href="https://github.com/RoDoors"><b>GITHUB</b></a>
+			<a href="#" disabled><b>DISCORD</b></a>
+		</div>
+	  </div>
+	
       <b class="title">RODoors</b>
 	  
       <div class="description">
