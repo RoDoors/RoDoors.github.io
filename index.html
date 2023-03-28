@@ -1,168 +1,114 @@
+<!doctype html>
 <html>
-  <head>
-	<title>RODoors</title>
-	
-	<meta content="RODoors" property="og:title" />
-    <meta content="RODoors is A server made on Minehut that is like DOORS from roblox." property="og:description" />
-    <meta content="https://rodoors.github.io/" property="og:url" />
-    <meta content="https://rodoors.github.io/images/placeholder.png" property="og:image" />
-    <meta content="#292929" data-react-helmet="true" name="theme-color" />
-  
-	<script src="./js/index.js" defer></script>
-  
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Lilita+One&display=swap');
-      
-	  ::-webkit-scrollbar {
-		  width: 10px;
-	  }
-
-	  /* Track */
-	  ::-webkit-scrollbar-track {
-	    background: #1c1c1c;
-	  }
-
-	  /* Handle */
-	  ::-webkit-scrollbar-thumb {
-	    background: #3d3d3d;
-	  }
-
-	  /* Handle on hover */
-	  ::-webkit-scrollbar-thumb:hover {
-	    background: #333333;
-	  }
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  
-	  body {
-		scrollbar-color: #1c1c1c #3d3d3d;
-		scrollbar-width: thin;
-	  }
+	  <title>RODoors</title>
+	  <meta content="RODoors" property="og:title" />
+	  <meta content="RODoors is A server made on Minehut that is like DOORS from roblox." property="og:description" />
+	  <meta content="https://rodoors.github.io/" property="og:url" />
+	  <meta content="/images/placeholders/placeholder.png" property="og:image" />
+	  <meta content="#292929" data-react-helmet="true" name="theme-color" />
 	  
-      body {
-        margin: 0;
-        background-color: #292929;
-        color: white;
-        font-family: 'Comfortaa', cursive;
-      }
-      
-      .content { 
-		text-align: center;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-      }
-	  
-	  .content a {
-		opacity: 0.75;
-		color: white;
-	  }
-      
-      .title {
-        font-size: 2rem;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-      }
-      
-      .description {
-        font-size: 0.95rem;
-		margin-bottom: 1rem;
-      }
-	  
-	  .screenshots {
-		margin-top: 0.5rem; 
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: 0.4rem 0.55rem;
-		max-width: 80%;
-	  }
-	  
-	  .header {
-		position: sticky;
-		top: 0;
-		z-index: 999;
-		background-color: #3d3d3d;
-		width: 100%;
-		height: 4rem;
-		margin-bottom: 1rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	  }
-	  
-	  .nav {
-		margin-right: 1rem;
-		display: flex;
-		justify-content: flex-end;
-		gap: 0.15rem;
-	  }
-	  
-	  .nav a {
-		text-decoration: none;
-		padding: 1rem;
-		background-color: #1f1f1f;
-		color: white;
-		opacity: 1;
-		max-height: 100%;
-	  }
-	  
-	  .nav a:hover {
-		color: gray;
-	  }
-	  
-	  a[disabled], a[disabled]:hover {
-		color: gray;
-		opacity: 0.65;
-		cursor: pointer;
-		pointer-events: none;
-	  }
-	  
-	  img {
-		max-width: 40%;
-		height: auto;
-		border-radius: 5px;
-		border-style: solid;
-		border-width: 3px;
-		border-color: #525252;
-		opacity: 0.95;
-		aspect-ratio: 4/2;
-	  }
-    </style>
-  </head>
-  <body>
-    <div class="content">
-	  <div class="header">
-		<b style="font-size: 1.5rem; margin-left: 1rem; font-family: 'Lilita One', cursive; color: lightgray;">RODoors</b>
-		<div class="nav">
-			<a href="/"><b>HOME</b></a>
-			<a href="https://github.com/RoDoors"><b>GITHUB</b></a>
-			<a href="#" disabled><b>DISCORD</b></a>
+	  <style>
+		@tailwind base;
+		@tailwind components;
+		@tailwind utilities;
+		
+		@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Lilita+One&display=swap');
+		
+		@layer components {
+			.btn {
+				--tw-bg-opacity: 1;
+				font-weight: 500;
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				border-radius: 0.25rem;
+				background-color: rgb(161 161 170 / var(--tw-bg-opacity));
+			}
+			
+			.btn:hover:not([disabled]) {
+				background-color: rgb(113 113 122 / var(--tw-bg-opacity));
+			}
+			
+			:is(.dark) .btn:not([disabled]) {
+				background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+			}
+			
+			:is(.dark) .btn:hover:not([disabled]) {
+				background-color: rgb(82 82 91 / var(--tw-bg-opacity));
+			}
+			
+			:is(.dark) .btn[disabled] {
+				background-color: rgb(113 113 122 / var(--tw-bg-opacity));
+			}
+			
+			.btn[disabled] {
+				background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+				cursor: not-allowed;
+				pointer-events: none;
+			}
+			
+			.screenshots img {
+				max-width: 40%;
+				height: auto;
+				border-radius: 5px;
+				border-style: solid;
+				border-width: 3px;
+				border-color: black;
+				aspect-ratio: 4/2;
+			}
+		}
+	  </style>
+	</head>
+	<body class="bg-zinc-200 text-slate-950 dark:bg-zinc-800 dark:text-white">
+		<div>
+			<div class="max-h-14 flex justify-between p-4 bg-zinc-300 text-slate-950 dark:bg-zinc-900 dark:text-slate-50 sticky top-0">
+				<a class="text-lg" style="font-family: 'Lilita One', cursive;">RODoors</a>
+				<nav class="md:hidden"><a href="#" class="btn">W.I.P</a></nav>
+				<nav class="hidden md:block">
+					<a href="#" class="btn">Home</a>
+					<a href="#" class="btn">Github</a>
+					<a disabled class="btn">Discord</a>
+				</nav>
+			</div>
+			<div class="flex content-center flex-wrap flex-col p-4">
+				<div class="text-center mb-7">
+				  <b class="text-[3em]">RODoors</b>
+				  <div>
+				    RODoors is A project on 
+				    <a href="https://minehut.com">Minehut</a> that is like 
+				    <a href="https://www.roblox.com/games/6516141723/DOORS">DOORS</a> from roblox but in <i>minecraft.</i>
+				  </div>
+				</div>
+				<div class="screenshots grid gap-4 grid-cols-2 max-w-4xl">
+					<img src="./images/placeholder/placeholder.png" width="640" height="360"/>
+					<img src="./images/placeholder/placeholder-2.png" width="640" height="360"/>
+					<img src="./images/placeholder/placeholder-3.png" width="640" height="360"/>
+					<img src="./images/placeholder/placeholder.png" width="640" height="360"/>
+					<img src="./images/placeholder/placeholder-2.png" width="640" height="360"/>
+					<img src="./images/placeholder/placeholder-3.png" width="640" height="360"/>
+				</div>
+				<div class="flex gap-1 text-bold mt-7 justify-center">
+					<p style="color: yellow">[WARNING!]</p>
+					<p>Images and gameplay screenshots/videos above are not final and are subject to change.</p>
+				</div>
+			</div>
 		</div>
-	  </div>
-	
-      <b class="title">RODoors</b>
-	  
-      <div class="description">
-        RODoors is A project on 
-        <a href="https://minehut.com">Minehut</a> that is like 
-        <a href="https://www.roblox.com/games/6516141723/DOORS">DOORS</a> from roblox but in <i>minecraft.</i>
-	  </div>
-	  
-	  <div class="screenshots">
-		  <img src="./images/placeholder.png" width="640" height="360"/>
-		  <img src="./images/placeholder-2.png" width="640" height="360"/>
-		  <img src="./images/placeholder-3.png" width="640" height="360"/>
-		  <img src="./images/placeholder.png" width="640" height="360"/>
-		  <img src="./images/placeholder-2.png" width="640" height="360"/>
-		  <img src="./images/placeholder-3.png" width="640" height="360"/>
-	  </div>
-	  
-	  <div style="font-size: 0.75rem; font-weight: bold; display: flex; justify-content: center">
-		<p style="color: yellow">[WARNING!]</p>
-		&nbsp;
-		<p>Images and gameplay screenshots/videos above are not final and are subject to change.</p>
-	  </div>
-    </div>
-  </body>
+		<script src="https://cdn.tailwindcss.com"></script>
+	    <script>
+			tailwind.config = {
+				darkMode: 'class',
+			};
+		
+			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark')
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+	    </script>
+	</body>
 </html>
