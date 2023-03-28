@@ -11,6 +11,9 @@
 	  <meta content="/images/placeholders/placeholder.png" property="og:image" />
 	  <meta content="#292929" data-react-helmet="true" name="theme-color" />
 	  
+	  <script src="https://cdn.tailwindcss.com" defer></script>
+	  <script src="./scripts/config.js" defer></script>
+	  
 	  <style>
 		@tailwind base;
 		@tailwind components;
@@ -98,17 +101,5 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://cdn.tailwindcss.com"></script>
-	    <script>
-			tailwind.config = {
-				darkMode: 'class',
-			};
-		
-			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-				document.documentElement.classList.add('dark')
-			} else {
-				document.documentElement.classList.remove('dark')
-			}
-	    </script>
 	</body>
 </html>
