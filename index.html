@@ -12,8 +12,8 @@
 	  <meta content="#292929" data-react-helmet="true" name="theme-color" />
 	  
 	  <script src="https://cdn.tailwindcss.com" defer></script>
-	  <script src="/assets/scripts/config.js" defer></script>
-	  <script src="/assets/scripts/main.js"></script>
+	  <script src="/assets/scripts/theme.js" defer></script>
+	  <script src="/assets/scripts/components.js"></script>
 	  
 	  <link rel="stylesheet" type="text/css" href="/assets/styles/base.css" />
 	</head>
@@ -27,29 +27,32 @@
 
 			<div class="flex content-center flex-wrap flex-col p-4">
 				<div class="text-center mb-7">
-				  <b class="text-[3em]">RODoors</b>
-				  <div>
-				    RODoors is A project on 
-				    <a href="https://minehut.com" class="text-slate-400 underline">Minehut</a> that is like 
-				    <a href="https://www.roblox.com/games/6516141723/DOORS" class="text-slate-400 underline">DOORS</a> from roblox but in <i>minecraft.</i>
-				  </div>
+				  	<b class="text-[3em]">RODoors</b>
+
+					<div>
+						RODoors is A project on 
+						<a href="https://minehut.com" class="text-slate-400 underline">Minehut</a> 
+						that is like 
+						<a href="https://www.roblox.com/games/6516141723/DOORS" class="text-slate-400 underline">
+							DOORS
+						</a> from roblox but in <i>minecraft.</i>
+					</div>
 				</div>
 
 				<div class="flex flex-col align-center">
-					<gameplay-screenshots 
-						srcs='[
-							"/assets/images/placeholder/placeholder.png",
-							"/assets/images/placeholder/placeholder-2.png",
-							"/assets/images/placeholder/placeholder-3.png",
-							"/assets/images/placeholder/placeholder.png",
-							"/assets/images/placeholder/placeholder-2.png",
-							"/assets/images/placeholder/placeholder-3.png"
-						]' width="640" height="360"
-					></gameplay-screenshots>
+					<gameplay-screenshots srcs='[
+						"/assets/images/placeholder/placeholder.png",
+						"/assets/images/placeholder/placeholder-2.png",
+						"/assets/images/placeholder/placeholder-3.png",
+						"/assets/images/placeholder/placeholder.png",
+						"/assets/images/placeholder/placeholder-2.png",
+						"/assets/images/placeholder/placeholder-3.png"
+					]' width="640" height="360"></gameplay-screenshots>
 					
-					<div class="text-center text-bold mt-7">
-						<p style="color: yellow">[WARNING!]</p>
-						<p>Images and gameplay screenshots/videos above are not final and are subject to change.</p>
+					<div class="text-center mt-7">
+						<b><b style="color: yellow">[WARNING!]</b>
+							Images and gameplay screenshots/videos above are not final and are subject to change.
+						</b>
 					</div>
 				</div>
 			</div>
