@@ -11,18 +11,17 @@
 	  <meta content="#292929" data-react-helmet="true" name="theme-color" />
 	  
 	  <script src="https://cdn.tailwindcss.com" defer></script>
-	  <script src="/scripts/config.js" defer></script>
+	  <script src="/assets/scripts/config.js" defer></script>
+	  <script src="/assets/scripts/main.js"></script>
 	  
-	  <link rel="stylesheet" type="text/css" href="/styles/base.css" />
+	  <link rel="stylesheet" type="text/css" href="/assets/styles/base.css" />
 	</head>
 	<body>
 		<div class="h-screen bg-gray-900 text-white">
-			<div class="max-h-14 flex justify-between p-4 text-slate-950 dark:text-slate-50 sticky top-0">
-				<a class="text-lg" style="font-family: 'Lilita One', cursive;">RODoors</a>
-				<nav>
-					<a href="/" class="btn">Home</a>
-				</nav>
-			</div>
+			<nav-bar gap="0.45rem" logo-name="RODoors">
+				<a href="/" class="btn">Home</a>
+			</nav-bar>
+
 			<div class="flex justify-center items-center h-4/5">
 				<p class="text-[3em]">404</p>
 			</div>

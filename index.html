@@ -8,25 +8,23 @@
 	  <meta content="RODoors" property="og:title" />
 	  <meta content="RODoors is A server made on Minehut that is like DOORS from roblox." property="og:description" />
 	  <meta content="https://rodoors.github.io/" property="og:url" />
-	  <meta content="/images/placeholders/placeholder.png" property="og:image" />
+	  <meta content="/assets/images/placeholders/placeholder.png" property="og:image" />
 	  <meta content="#292929" data-react-helmet="true" name="theme-color" />
 	  
 	  <script src="https://cdn.tailwindcss.com" defer></script>
-	  <script src="/scripts/config.js" defer></script>
+	  <script src="/assets/scripts/config.js" defer></script>
+	  <script src="/assets/scripts/main.js"></script>
 	  
-	  <link rel="stylesheet" type="text/css" href="/styles/base.css" />
+	  <link rel="stylesheet" type="text/css" href="/assets/styles/base.css" />
 	</head>
 	<body class="bg-zinc-200 text-slate-950 dark:bg-zinc-800 dark:text-white">
 		<div>
-			<div class="max-h-14 flex justify-between p-4 bg-zinc-300 text-slate-950 dark:bg-zinc-900 dark:text-slate-50 sticky top-0">
-				<a class="text-lg" style="font-family: 'Lilita One', cursive;">RODoors</a>
-				<nav class="md:hidden"><a href="#" class="btn">W.I.P</a></nav>
-				<nav class="hidden md:block">
-					<a href="/" class="btn">Home</a>
-					<a href="https://github.com/RoDoors/" class="btn">Github</a>
-					<a disabled class="btn">Discord</a>
-				</nav>
-			</div>
+			<nav-bar gap="0.45rem" logo-name="RODoors">
+				<a href="/" class="btn">Home</a>
+				<a href="https://github.com/RoDoors/" class="btn">Github</a>
+				<a disabled class="btn">Discord</a>
+			</nav-bar>
+
 			<div class="flex content-center flex-wrap flex-col p-4">
 				<div class="text-center mb-7">
 				  <b class="text-[3em]">RODoors</b>
@@ -37,12 +35,12 @@
 				  </div>
 				</div>
 				<div class="screenshots grid gap-4 grid-cols-2 max-w-4xl">
-					<img src="./images/placeholder/placeholder.png" width="640" height="360"/>
-					<img src="./images/placeholder/placeholder-2.png" width="640" height="360"/>
-					<img src="./images/placeholder/placeholder-3.png" width="640" height="360"/>
-					<img src="./images/placeholder/placeholder.png" width="640" height="360"/>
-					<img src="./images/placeholder/placeholder-2.png" width="640" height="360"/>
-					<img src="./images/placeholder/placeholder-3.png" width="640" height="360"/>
+					<img src="/assets/images/placeholder/placeholder.png" width="640" height="360"/>
+					<img src="/assets/images/placeholder/placeholder-2.png" width="640" height="360"/>
+					<img src="/assets/images/placeholder/placeholder-3.png" width="640" height="360"/>
+					<img src="/assets/images/placeholder/placeholder.png" width="640" height="360"/>
+					<img src="/assets/images/placeholder/placeholder-2.png" width="640" height="360"/>
+					<img src="/assets/images/placeholder/placeholder-3.png" width="640" height="360"/>
 				</div>
 				<div class="flex gap-1 text-bold mt-7 justify-center">
 					<p style="color: yellow">[WARNING!]</p>
